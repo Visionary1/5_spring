@@ -1,0 +1,10 @@
+package com.quiz.test;
+
+@Controller
+public class TestController {
+  @ResponseBody
+    @RequestMapping("/test1")
+    public String helloWorld() {
+        return "Hello world!";
+    }
+}

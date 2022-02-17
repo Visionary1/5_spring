@@ -1,0 +1,15 @@
+package com.example.lesson01;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Lesson01Ex01Controller {
+
+	// request URL : http://localhost:8080/lesson01/ex01/1
+	@RequestMapping("/lesson01/ex01/1")
+	public String ex01_1() {
+		String text = "ex 01";
+	}
+
+}

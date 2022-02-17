@@ -1,0 +1,8 @@
+package com.example.test;
+
+@Controller
+public class TestController {
+
+	@ResponseBody
+	@RequestMapping("/test1")
+}

@@ -1,0 +1,7 @@
+package com.quiz.lesson01;
+
+@RequestMapping("/lesson01/quiz01")
+@Controller
+public class Lesson01Quiz01Controller {
+
+}

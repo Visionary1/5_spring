@@ -1,0 +1,23 @@
+package com.example.lesson01;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@RequestMapping("/lesson01/ex01")
+@Controller
+public class Lesson01Ex01Controller {
+
+	// request URL : http://localhost:8080/lesson01/ex01/1
+	@ResponseBody
+	@RequestMapping("/1")
+	public String ex01_1() {
+		String text = "ex 01 <br> 문자열을 response body 로 보내는 예제";
+		return text;
+	}
+	
+	// request URL : http://localhost:8080/lesson01/ex01/2
+	// @RequestMapping("/lesson01/ex01/2")
+	// 중복되니까 클래스 밖에서 중첩되는 부분 선언 가능 @RequestMapping("/lesson01/ex01")
+
+}
