@@ -1,0 +1,9 @@
+package com.example.lesson01;
+
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController // @Controller + @ResponseBody
+public class Lesson01Ex01RestController {
+
+}

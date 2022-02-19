@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+/Users/csk/eclipse-workspace/5_spring/ex/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2484327554.index
+/SpringExample/src/main/java

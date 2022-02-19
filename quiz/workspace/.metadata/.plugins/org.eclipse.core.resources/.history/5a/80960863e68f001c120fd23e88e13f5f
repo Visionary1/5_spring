@@ -1,0 +1,76 @@
+package com.quiz.lesson01;
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RequestMapping("/lesson01/quiz02")
+@RestController
+public class Lesson01Quiz02Controller {
+
+	//	1. json 출력 (List, Map)
+	//	영화 정보를 저장한 json을 List와 Map을 활용해서 아래와 같이 출력하세요.
+	//	요청 URL : http://localhost:8080/lesson01/quiz02/1
+	@RequestMapping("/1")
+	public List<Map <String, String>> quiz02_1() {
+		
+		List<Map<String, String>> listMapInsert = new ArrayList<Map<String, String>>();
+		
+		Map<String, String> films = new HashMap<>();
+		films.put("rate", "15");
+		films.put("director", "봉준호");
+		films.put("time", "131");
+		films.put("title", "기생충");
+		listMapInsert.add(films);
+		
+		films.put("rate", "0");
+		films.put("director", "로베르토 베니니");
+		films.put("time", "116");
+		films.put("title", "인생은 아름다워");
+		listMapInsert.add(films);
+		
+		films.put("rate", "12");
+		films.put("director", "크리스토퍼 놀란");
+		films.put("time", "147");
+		films.put("title", "인셉션");
+		listMapInsert.add(films);
+		
+		films.put("rate", "19");
+		films.put("director", "윤종빈");
+		films.put("time", "133");
+		films.put("title", "범죄와의 전쟁");
+		listMapInsert.add(films);
+		
+		films.put("rate", "15");
+		films.put("director", "프란시스 로렌스");
+		films.put("time", "137");
+		films.put("title", "헝거게임");
+		listMapInsert.add(films);
+		
+		return listMapInsert;
+	}
+	
+	//	2. json 출력 (List, Class)
+	//	게시판 내용을 저장한 json을 List 와 Class 를 설계하고 활용해서 아래와 같이 출력하세요.
+	//	요청 URL : http://localhost:8080/lesson01/quiz02/2
+	@RequestMapping("/2")
+	public Lesson01Quiz02_2 quiz02_2() {
+		
+		Lesson01Quiz02_2 jsonClass = new Lesson01Quiz02_2();
+		jsonClass.setTitle("안녕하세요 가입인사 드립니다.");
+		jsonClass.setUser("hagulu");
+		jsonClass.setContent("안녕하세요, 가입했어요, 앞으로 잘 부탁드립니다. 활동 열심히 하겠습니다");
+		
+		List<Object> listMapInsert = new ArrayList<>();
+		listMapInsert.add(jsonClass);
+		return jsonClass;
+		
+	}
+	
+	
+}
