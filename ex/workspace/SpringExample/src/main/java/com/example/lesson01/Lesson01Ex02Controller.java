@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class Lesson01Ex02Controller {
 	
 	// request URL : http://localhost:8080/lesson01/ex02/1
-	@RequestMapping("/lesson01/ex02/1")
+	// @RequestMapping("/lesson01/ex02/1")
 	public String ex01_1() {
 		
 		// ResponseBody 가 아닌 상태로 string 을 리턴하면

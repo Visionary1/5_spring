@@ -12,7 +12,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
-@MapperScan(basePackages = "com.example.*")  // mapper scan 추가!!!
+//@MapperScan(basePackages = "com.example.*")  // mapper scan 추가!!!
 @SpringBootApplication
 public class SpringExampleApplication {
 
@@ -20,14 +20,14 @@ public class SpringExampleApplication {
 		SpringApplication.run(SpringExampleApplication.class, args);
 	}
 
-    @Bean
-    public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
-        SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
-        sessionFactory.setDataSource(dataSource);
-
-        Resource[] res = new PathMatchingResourcePatternResolver().getResources("classpath:mappers/*Mapper.xml");
-        sessionFactory.setMapperLocations(res);
-
-        return sessionFactory.getObject();
-    }	
+//    @Bean
+//    public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
+//        SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+//        sessionFactory.setDataSource(dataSource);
+//
+//        Resource[] res = new PathMatchingResourcePatternResolver().getResources("classpath:mappers/*Mapper.xml");
+//        sessionFactory.setMapperLocations(res);
+//
+//        return sessionFactory.getObject();
+//    }	
 }
